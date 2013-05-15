@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="lucene-index-src"/>
+	<classpathentry kind="src" path="graph-algo-src"/>
+	<classpathentry excluding="org/neo4j/kernel/impl/annotations/AnnotationProcessor.java|org/neo4j/kernel/impl/annotations/CompilationManipulator.java|org/neo4j/kernel/impl/annotations/DocumentationProcessor.java|org/neo4j/kernel/impl/annotations/ServiceProcessor.java" kind="src" path="kernel-src"/>
+	<classpathentry kind="src" path="graph-matching-src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

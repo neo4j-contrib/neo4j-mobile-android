@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+    Copyright (c) 2002-2013 "Neo Technology,"
+    Network Engine for Objects in Lund AB [http://neotechnology.com]
+
+    This file is part of Neo4j.
+
+    Neo4j is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<resources>
+
+    <!-- Common -->
+    <string name="app_name">Neo4j DB Inspector</string>
+    <string name="warning_title">Warning</string>
+    <string name="error_title">Error</string>
+    <string name="database_error">There was a problem accessing the service or database.</string>
+    <string name="database_title">Database: </string>
+
+    <!-- Main -->
+    <string name="main_activity_label">Neo4j DB Inspector</string>
+    <string name="main_database_text">Available Databases:</string>
+    <string name="main_open_database_title">Open Database</string>
+    <string name="main_open_database_question">Open database \'%1$s\'?</string>
+    <string name="main_close_database_title">Close Database</string>
+    <string name="main_close_database_question">Close database \'%1$s\'?</string>
+    <string name="main_create_database_title">Create Database</string>
+    <string name="main_create_database_already_exists_error">Database \'%1$s\' already exists.</string>
+    <string name="main_delete_database_title">Delete Database</string>
+    <string name="main_delete_database_question">Delete database \'%1$s\'?</string>
+    <string name="main_export_database_title">Export Database</string>
+    <string name="main_export_database_question">Export database \'%1$s\'?</string>
+    <string name="main_waiting_for_service">Waiting for Neo4j Service…</string>
+    <string name="main_refresh_databases">Refresh</string>
+    <string name="main_test_database">Create Test Database</string>
+    <string name="main_creating_test_database">Creating test database…</string>
+    <string name="main_opening_database">Opening database…</string>
+
+    <!-- Root Nodes -->
+    <string name="rootnode_activity_label">Neo4j DB Inspector: Root Nodes</string>
+    <string name="referencenode_text">Reference Node:</string>
+    <string name="rootnode_text">Root Nodes:</string>
+    <string name="cyclenode_text">Cycle Nodes:</string>
+
+    <!-- Nodes -->
+    <string name="node_activity_label">Neo4j DB Inspector: Nodes</string>
+    <string name="node_text">Nodes:</string>
+    <string name="node_relationships_loop_button">loop</string>
+    <string name="node_relationships_forward_button">--></string>
+    <string name="node_relationships_backward_button">&lt;--</string>
+    <string name="node_relationships_both_button">&lt;--></string>
+    <string name="node_relationships_unknown_button">-?-</string>
+    <string name="node_select_related_node_question">Select a node pointing to node \'%1$s\':</string>
+    <string name="node_create_title">Create Node</string>
+    <string name="node_create_default_relationship">Create default relationship</string>
+    <string name="node_create_default_relationship_name">__DEFAULT__</string>
+
+    <!-- Node Properties -->
+    <string name="node_properties_activity_label">Neo4j DB Inspector: Node Properties</string>
+    <string name="node_properties_text">Node \'%1$s\' Properties:</string>
+    <string name="node_delete_title">Delete Node</string>
+    <string name="node_delete_question">Delete node \'%1$s\'?</string>
+    <string name="node_delete_referencenode_error">Cannot delete reference node.</string>
+
+    <!-- Relationships -->
+    <string name="relationship_activity_label">Neo4j DB Inspector: Relationships</string>
+    <string name="relationship_text">Relationships:</string>
+    <string name="relationship_create_title">Create Relationship</string>
+    <string name="relationship_create_name">Name:</string>
+    <string name="relationship_create_startnode">Start node: \'%1$s\'</string>
+    <string name="relationship_create_endnode">End node:</string>
+    <string name="relationship_create_endnodeid_prompt">select end node id</string>
+
+    <!-- Relationship Properties -->
+    <string name="relationship_properties_activity_label">Neo4j DB Inspector: Relationship Properties</string>
+    <string name="relationship_properties_text">Relationship \'%1$s\' Properties:</string>
+    <string name="relationship_delete_title">Delete Relationship</string>
+    <string name="relationship_delete_question">Delete relationship \'%1$s\'?</string>
+
+    <!-- Property -->
+    <string name="property_activity_label">Neo4j DB Inspector: Property</string>
+    <string name="property_create_title">Create Property</string>
+    <string name="property_create_already_exists_on_node_error">Property \'%1$s\' with value \'%2$s\' on node with id  \'%3$s\' already exists.</string>
+    <string name="property_create_already_exists_on_relationship_error">Property \'%1$s\' with value \'%2$s\' on relationship with id  \'%3$s\' already exists.</string>
+    <string name="property_update_title">Update Property</string>
+    <string name="property_delete_title">Delete Property</string>
+    <string name="property_delete_from_node_question">Delete Property \'%1$s\' with value \'%2$s\' from node with id \'%3$s\'?</string>
+    <string name="property_delete_from_relationship_question">Delete Property \'%1$s\' with value \'%2$s\' from relationship with id \'%3$s\'?</string>
+    <string name="property_text">Property:</string>
+    <string name="property_key">Key:</string>
+    <string name="property_value">Value:</string>
+    <string name="property_key_or_value_empty_error">Property key \'%1$s\' or value \'%2$s\' is empty.</string>
+
+</resources>

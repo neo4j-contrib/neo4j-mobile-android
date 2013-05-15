@@ -1,0 +1,10 @@
+This port is based on Neo4j 1.5 M02
+https://github.com/neo4j/community/tarball/1.5.M02
+
+To build:
+- $ ant debug
+
+To use:
+- Copy the jar "<neo4j-android>/bin/neo4j-android.jar" to your "<app-using-neo4j>/libs/" and put it on your build classpath.
+- We are working on a better solution with library projects or some such, but it's not trivial.
+

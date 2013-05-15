@@ -1,0 +1,19 @@
+README
+------
+This is the service wrapper around an embeddable Neo4j database.
+
+Service
+-------
+The service is a bound service, and can be reached through this action:
+org.neo4j.android.service.Neo4jService
+
+Interface
+---------
+Currently the AIDL files are the only documentation.
+
+Access Control
+--------------
+Permissions required to interact with the service:
+
+org.neo4j.android.permission.READ: Bind to service, read data
+org.neo4j.android.permission.WRITE: Modify data

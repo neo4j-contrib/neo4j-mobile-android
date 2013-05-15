@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+    Copyright (c) 2002-2013 "Neo Technology,"
+    Network Engine for Objects in Lund AB [http://neotechnology.com]
+
+    This file is part of Neo4j.
+
+    Neo4j is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/nodePropertiesTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/node_properties_text"
+        android:textSize="16dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:id="@+id/nodePropertiesListLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/nodeCreatePropertyButton"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:src="@android:drawable/ic_menu_add" />
+
+        <ImageButton
+            android:id="@+id/nodeDeleteButton"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:src="@android:drawable/ic_menu_delete" />
+    </LinearLayout>
+
+</LinearLayout>

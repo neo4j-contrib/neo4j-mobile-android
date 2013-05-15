@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+    Copyright (c) 2002-2013 "Neo Technology,"
+    Network Engine for Objects in Lund AB [http://neotechnology.com]
+
+    This file is part of Neo4j.
+
+    Neo4j is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.neo4j.android.service"
+    android:versionCode="152"
+    android:versionName="1.5M02" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="15" />
+
+    <!-- Define a very coarse functional permission scheme -->
+    <permission
+        android:name="org.neo4j.android.permission.READ"
+        android:description="@string/perm_read_desc"
+        android:label="@string/perm_read_label"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="org.neo4j.android.permission.WRITE"
+        android:description="@string/perm_write_desc"
+        android:label="@string/perm_write_label"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="org.neo4j.android.permission.ADMIN"
+        android:description="@string/perm_admin_desc"
+        android:label="@string/perm_admin_label"
+        android:protectionLevel="dangerous" />
+
+    <!-- Everything in here has read/write permission -->
+    <uses-permission android:name="org.neo4j.android.permission.READ" />
+    <uses-permission android:name="org.neo4j.android.permission.WRITE" />
+    <uses-permission android:name="org.neo4j.android.permission.ADMIN" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".Neo4jServiceApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_neo4j"
+        android:label="@string/app_name" >
+        <service
+            android:name=".Neo4jServiceImpl"
+            android:permission="org.neo4j.android.permission.READ" >
+            <intent-filter>
+                <action android:name="org.neo4j.android.service.Neo4jService" />
+            </intent-filter>
+        </service>
+
+        <!-- Start service after booting completes -->
+        <receiver android:name=".BootBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
