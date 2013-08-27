@@ -280,9 +280,6 @@
     <condition property="bat" value=".bat" else=""><os family="windows" /></condition>
     <property name="adb" location="${android.platform.tools.dir}/adb${exe}" />
     <property name="zipalign" location="${android.tools.dir}/zipalign${exe}" />
-    <property name="aidl" location="${android.platform.tools.dir}/aidl${exe}" />
-    <property name="aapt" location="${android.platform.tools.dir}/aapt${exe}" />
-    <property name="dx" location="${android.platform.tools.dir}/dx${bat}" />
     <property name="renderscript" location="${android.platform.tools.dir}/llvm-rs-cc${exe}"/>
     <property name="lint" location="${android.tools.dir}/lint${bat}" />
 
@@ -590,6 +587,11 @@
 
     <!-- Pre build setup -->
     <target name="-build-setup" depends="-setup">
+        <!-- find location of build tools -->
+        <getbuildtools name="android.build.tools.dir" />
+        <property name="aidl" location="${android.build.tools.dir}/aidl${exe}" />
+        <property name="aapt" location="${android.build.tools.dir}/aapt${exe}" />
+        <property name="dx" location="${android.build.tools.dir}/dx${bat}" />
 
         <!-- read the previous build mode -->
         <property file="${out.build.prop.file}" />
@@ -763,7 +765,7 @@
             <!-- renderscript generates resources so it must be called before aapt -->
             <echo level="info">----------</echo>
             <echo level="info">Handling RenderScript files...</echo>
-            <renderscript executable="${renderscript}"
+            <renderscript buildToolsRoot="${android.build.tools.dir}"
                     includePathRefId="android.renderscript.include.path"
                     genFolder="${gen.absolute.dir}"
                     resFolder="${out.res.absolute.dir}/raw"
