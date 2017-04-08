@@ -636,7 +636,7 @@ public class TxManager extends AbstractTransactionManager
         if ( !tmOk )
         {
             throw new SystemException( "TM has encountered some problem, "
-                + "please perform neccesary action (tx recovery/restart)" );
+                + "please perform necessary action (tx recovery/restart)" );
         }
     }
 
@@ -751,7 +751,7 @@ public class TxManager extends AbstractTransactionManager
             catch ( Throwable e )
             {
                 log.log( Level.SEVERE, "Unable to rollback transaction. "
-                    + "Some resources may be commited others not. "
+                    + "Some resources may be committed others not. "
                     + "Neo4j kernel should be SHUTDOWN for "
                                        + "resource maintance and transaction recovery ---->", e );
                 setTmNotOk( e );
@@ -764,7 +764,7 @@ public class TxManager extends AbstractTransactionManager
                 {
                     commitError = "error code in commit: " + xaErrorCode;
                 }
-                String rollbackErrorCode = "Uknown error code";
+                String rollbackErrorCode = "Unknown error code";
                 if ( e instanceof XAException )
                 {
                     rollbackErrorCode = Integer.toString( ( (XAException) e ).errorCode );
@@ -833,7 +833,7 @@ public class TxManager extends AbstractTransactionManager
         catch ( XAException e )
         {
             log.log( Level.SEVERE, "Unable to rollback marked transaction. "
-                + "Some resources may be commited others not. "
+                + "Some resources may be committed others not. "
                 + "Neo4j kernel should be SHUTDOWN for "
                                    + "resource maintance and transaction recovery ---->", e );
             setTmNotOk( e );
@@ -892,7 +892,7 @@ public class TxManager extends AbstractTransactionManager
                 catch ( XAException e )
                 {
                     log.log( Level.SEVERE, "Unable to rollback marked or active transaction. "
-                        + "Some resources may be commited others not. "
+                        + "Some resources may be committed others not. "
                         + "Neo4j kernel should be SHUTDOWN for "
                                            + "resource maintance and transaction recovery ---->", e );
                     setTmNotOk( e );
